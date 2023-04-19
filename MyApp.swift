@@ -11,6 +11,9 @@ struct MyApp: App {
         WindowGroup {
             NavigationView{
                 CreditsView()
+                    .onAppear{
+                        MusicPlayer.shared.play()
+                    }
             }.navigationViewStyle(.stack)
         }
     }
