@@ -32,7 +32,6 @@ struct CreditsView: View {
             .offset(y: isTextHidden ? 1.5*UIScreen.main.bounds.height : -UIScreen.main.bounds.height)
             .onChange(of: isTextHidden) { _ in
                 withAnimation(.linear(duration: 15)) {
-                    //                self.isTextHidden = true
                 }
             }
         }
