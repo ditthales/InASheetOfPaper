@@ -12,9 +12,8 @@ struct CreditsView: View {
     
     var body: some View {
         ZStack {
-            Color.white
             VStack{
-                Text("This experience was made by Thales Fraga especially for apple's WWDC Swift Student Challenge 2023.\n\nRoyalties free music:\nMeditation by Arulo\nAvailable on mixkit.co\n\nCustom Fonts:\nJust Me Again Down Here by Kimberly Geswein\nAvailable on Google Fonts\n\nIllustrations made by:\nThales Fraga\n-->YOU<--\n\nScript made by:\nThales Fraga\n\nSpecial thanks to:")
+                Text("This experience was made by Thales Fraga especially for apple's WWDC Swift Student Challenge 2023.\n\nRoyalties free music:\nMeditation by Arulo\nAvailable on mixkit.co\n\nCustom Fonts:\nJust Me Again Down Here by Kimberly Geswein\nAvailable on Google Fonts\n\nIllustrations made by:\nThales Fraga\n-->YOU<--\n\nScript made by:\nThales Fraga\n\nSpecial thanks to:\n\n\n\n")
                     .font(Font.custom("JustMeAgainDownHere", size: 36))
                     .lineLimit(nil)
                     .multilineTextAlignment(.center)
@@ -28,6 +27,8 @@ struct CreditsView: View {
                         }
                     }
                 Image("thanks")
+                    .resizable()
+                    .frame(width: 480, height: 140, alignment: .center)
             }
             .offset(y: isTextHidden ? 1.5*UIScreen.main.bounds.height : -UIScreen.main.bounds.height)
             .onChange(of: isTextHidden) { _ in

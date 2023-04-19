@@ -22,6 +22,7 @@ class MusicPlayer {
             if let safeURL = url {
                 player = try AVAudioPlayer(contentsOf: safeURL)
                 player?.numberOfLoops = -1
+                player?.volume = 0.1
                 player?.play()
             }
            

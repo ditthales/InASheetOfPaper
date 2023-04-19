@@ -8,19 +8,19 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "In a Sheet of Paper",
+    name: "In A Sheet of Paper",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "In a Sheet of Paper",
+            name: "In A Sheet of Paper",
             targets: ["AppModule"],
             bundleIdentifier: "br.ufpe.cin.academy.tvgf.In-a-Sheet-of-Paper",
             teamIdentifier: "5M8NVJZA75",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .coins),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.blue),
             supportedDeviceFamilies: [
                 .pad,
@@ -31,7 +31,8 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            appCategory: .arcadeGames
         )
     ],
     targets: [

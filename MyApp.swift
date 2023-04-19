@@ -10,7 +10,7 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                CreditsView()
+                StartingView()
                     .onAppear{
                         MusicPlayer.shared.play()
                     }
